@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="pedidosApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Angular Pedidos</title>
+        <!-- General Styles -->
+        <link rel="stylesheet" href="css/generalStyle.css">
+        <!-- Components Styles -->
+        <link rel="stylesheet" href="components/footer/footer.css">
+        <link rel="stylesheet" href="components/pedidos/pedidos.css">
+        <link rel="stylesheet" href="components/header/header.css">
+    </head>
+    <body>
+        <pedidos-header></pedidos-header>
+        <main ng-controller="pedidosController">
+            <pedidos-main   pedidos-data="pedidos" 
+                            add-pedido="addPedido(pedido)"
+                            remove-pedido="removePedido(pedido)"
+                            edit-pedido="editPedido(pedido)"
+                            confirm-edit="confirmEdit(pedido)"></pedidos-main>
+        </main>
+        <pedidos-footer></pedidos-footer>
+    </body>
+    <!-- Angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-route.js"></script>
+    <!-- Module -->
+    <script src="js/module.js"></script>
+    <!--Controllers -->
+    <script src="js/controllers/pedidosController.js"></script>
+    <script src="js/controllers/newPedidosController.js"></script>
+    <!-- Directives-->
+    <script src="js/directives/components/header.js"></script>
+    <script src="js/directives/components/pedidos.js"></script>
+    <script src="js/directives/components/footer.js"></script>
+    <!-- Services -->
+    <script src="js/services/pedidosService.js"></script>
+</html>
